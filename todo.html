@@ -1,0 +1,31 @@
+<head>
+  <title>Meteor.js Todo List</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Meteor.js</h1>
+      <h2>To-do application</h2>
+			<p>A single-page web app created using Meteor.js by KC/Ruli:underscore</p>
+			<p>9-April-2015</p>
+      <form class="input-box">
+        <input type="text" name="text" placeholder="Type to add new tasks and press enter" />
+      </form>
+    </header>
+
+    <ul>
+      {{#each tasks}}
+        {{> task}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="task">
+  <li class="{{#if checked}}checked{{/if}}">
+    <span class="text">{{text}}</span>
+    <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+    <button class="delete">&times;</button>
+  </li>
+</template>
