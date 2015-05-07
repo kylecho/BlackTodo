@@ -1,4 +1,2 @@
-#Black Todo
+#Meteor.js Todo Application
 A single page web application made using Meteor.js
-
-This is a test.
